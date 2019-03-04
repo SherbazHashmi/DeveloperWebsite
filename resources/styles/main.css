@@ -1,0 +1,328 @@
+/* Importing Fonts */
+ @font-face {
+     font-family: RainbowDreams;
+     src: url("fonts/Rainbow\ Dreams.otf") format("opentype");
+ }
+
+/* Utilizing Root Psuedoclass to Store CSS Variables that I will Use Throughout Project*/
+:root {
+    --heading-color: #FFFFFF;
+    --tile-text-color: #f8f8f8;
+    --panel-dark-color: #00232A;
+    --panel-light-color: #01697F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: "Helvetica", Helvetica, sans-serif;
+    color: var(--heading-color);
+    font-weight: lighter;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+    margin-right: 30px;
+}
+
+
+/* Top Banner with Navbar */
+
+.banner {
+    background-image: url('../img/header.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between; 
+    align-items: center; 
+    
+}
+
+.navbar__social-panel {
+    padding: 20px 10px 0px 0px;
+}
+
+.navbar__social-panel > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.navbar__navigation {
+    padding: 20px 0px 0px 40px;
+}
+
+
+.navbar__navigation > ul > li > a {
+    color: var(--heading-color);
+    text-decoration: none;
+}
+
+.navbar__navigation > ul > li > a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 10%;
+    padding: 2px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner_pane {
+    padding: 20% 0%;
+}
+
+.pane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 3%;
+
+}
+
+.pane > .title {
+    font-size: 140%;
+    margin: 4% 0%;
+}
+
+.pane__left__text-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    margin-bottom: 20px;
+}
+
+.pane__left__text-content > span {
+    margin-bottom: 10px;
+    text-shadow: 2px 1.5px rgba(0, 0, 0, 0.4);
+}
+
+.pane__left__text-content__heading {
+    font-family: RainbowDreams;
+    font-size: 600%;
+}
+
+.pane__left__text-content__content {
+    width: 50%;
+}
+
+/* About Panel */
+#about {
+    background-color: var(--panel-dark-color);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#about > .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+#about > .content {
+    margin: 2% 0%;
+}
+
+.content > :first-child {
+    margin: 10px 0px;
+    font-size: 200%;
+}
+
+.about__text-content {
+    margin-top: 10px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0px;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.counter__text {
+    text-align: center;
+    font-size: 80%;
+    font-weight: bol der;
+}
+
+.stat {
+    margin-bottom: 10px;
+    font-weight: bolder;
+    font-size: 200%;
+}
+
+.counter > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#work {
+    background-color: var(--panel-light-color);
+}
+
+.tiles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tile {
+    display:block;
+    width: 25%;
+    max-width: 400px;
+    min-width: 155px;
+}
+
+
+.tile > * {
+    width: 100%;
+}
+
+.tile__image > * {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+.tile__text > * {
+    background-color: var(--tile-text-color);
+    display: block;
+    padding: 2% 4%;
+    text-align: left;
+    font-size: 73.6%;
+}
+
+.tile__text > :first-child {
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+.tile__text__roles {
+    color: #01697F;
+}
+
+.tile__text__description {
+    color: #303030;
+    padding-bottom: 5%;
+}
+
+
+.tile__name {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 150%;
+    font-weight: lighter;
+}
+
+
+#blog {
+    background-color: var(--panel-dark-color);
+    
+}
+
+#blog > .tiles > * {
+    width: 30%;
+}
+
+#blog > .tiles > .tile > .tile__image {
+    padding: 2% 0%;
+    text-align: center;
+    margin: 0 auto;
+    font-family: RainbowDreams;
+    font-size: 500%;
+    font-weight: lighter;
+}
+
+#blog > .tiles > .tile > .tile__text .tile__text__description > a {
+    color: #2963FD;
+}
+#blog > .tiles > .tile__one > .tile__image {
+    background-image: url(/resources/img/blog/blog-img-1.png);
+    background-size: cover;    
+}
+
+#blog > .tiles > .tile__two > .tile__image {
+    background-image: url(/resources/img/blog/blog-img-2.png);
+    background-size: cover;    
+}
+#blog > .tiles > .tile__three > .tile__image {
+    background-image: url(/resources/img/blog/blog-img-3.png);
+    background-size: cover;    
+}
+
+.tags {
+    font-size: 15%;
+    text-align: right;
+}
+
+#contact {
+    background-color: #101010;
+}
+
+.contact-form  {
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.contact-form > form > * {
+    margin-bottom: 20px;
+}
+
+
+
+.contact-form > form > div > * {
+    border-bottom-color: #015A71;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    margin-bottom: 20px;
+}
+.contact-form > form > div:first-child {
+    margin-right: 10px;
+}
+
+.contact-form > form > div:last-child {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-form > form > div:last-child > button {
+    background-color: #00323C;
+    border-radius: 10%;
+    border:0;
+    padding: 4% 6%;
+
+}
+
+.contact-form > form > div:nth-last-child(2) > input {
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    
+}
