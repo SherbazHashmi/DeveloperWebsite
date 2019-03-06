@@ -266,7 +266,7 @@ li {
     background-size: cover;    
 }
 #blog > .tiles > .tile__three > .tile__image {
-    background-image: ./resources/img/blog/blog-img-2.png;
+    background-image: './resources/img/blog/blog-img-2.png';
     background-size: cover;    
 }
 
