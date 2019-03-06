@@ -257,16 +257,16 @@ li {
     color: #2963FD;
 }
 #blog > .tiles > .tile__one > .tile__image {
-    background-image: url(/resources/img/blog/blog-img-1.png);
+    background-image: url(./resources/img/blog/blog-img-1.png);
     background-size: cover;    
 }
 
 #blog > .tiles > .tile__two > .tile__image {
-    background-image: url(/resources/img/blog/blog-img-2.png);
+    background-image: url(./resources/img/blog/blog-img-2.png);
     background-size: cover;    
 }
 #blog > .tiles > .tile__three > .tile__image {
-    background-image: url(/resources/img/blog/blog-img-3.png);
+    background-image: url(./resources/img/blog/blog-img-3.png);
     background-size: cover;    
 }
 
