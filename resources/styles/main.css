@@ -355,6 +355,9 @@ li {
     .contact-form {
         text-align: center;
     }
+    #contact > .title {
+        margin: 40px 0px;
+    }
 
     .contact-form:last-child {
         width:80%;
