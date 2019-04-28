@@ -1,453 +1,548 @@
 /* Importing Fonts */
 @font-face {
-    font-family: RainbowDreams;
-    src: url("fonts/Rainbow\ Dreams.otf") format("opentype");
+   font-family: RainbowDreams;
+   src: url("fonts/Rainbow\ Dreams.otf") format("opentype");
 }
 
 /* Utilizing Root Psuedoclass to Store CSS Variables that I will Use Throughout Project*/
 :root {
-   --heading-color: #FFFFFF;
-   --tile-text-color: #f8f8f8;
-   --panel-dark-color: #00232A;
-   --panel-light-color: #01697F;
+  --heading-color: #FFFFFF;
+  --tile-text-color: #f8f8f8;
+  --panel-dark-color: #00232A;
+  --panel-light-color: #01697F;
 }
 
 * {
-   margin: 0;
-   padding: 0;
-   border: 0;
-   outline: 0;
-   font-size: 100%;
-   vertical-align: baseline;
-   background: transparent;
-   font-family: "Helvetica", Helvetica, sans-serif;
-   color: var(--heading-color);
-   font-weight: lighter;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "Helvetica", Helvetica, sans-serif;
+  color: var(--heading-color);
+  font-weight: lighter;
 }
 
 ul {
-   list-style-type: none;
+  list-style-type: none;
 }
 
 li {
-   float: left;
-   margin-right: 30px;
+  float: left;
+  margin-right: 30px;
 }
 
 
 /* Top Banner with Navbar Setting Background Image */
 
 .banner {
-   background-image: url('../img/header.png');
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+  background-image: url('../img/header.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* Setting up Navbar To Display As Intended */
 
 .navbar {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: nowrap;
-   justify-content: space-between; 
-   align-items: center; 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between; 
+  align-items: center; 
 }
 /* Giving Navbar Some Spacing away from edge of screen */
 
 .navbar__social-panel {
-   padding: 20px 10px 0px 0px;
+  padding: 20px 10px 0px 0px;
 }
 
 /* Making the list element of the navbar social panel display as a row*/
 
 .navbar__social-panel > ul {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* Navbar Navigation Panel also getting padding to make it bigger*/
 
 .navbar__navigation {
-   padding: 20px 0px 0px 40px;
+  padding: 20px 0px 0px 40px;
 }
 
 /* Making Eeach Link in Navbar navigation the heading color */
 
 .navbar__navigation > ul > li > a {
-   color: var(--heading-color);
-   text-decoration: none;
+  color: var(--heading-color);
+  text-decoration: none;
 }
 
 /* Hover over navbar link makes it style specially */
 
 .navbar__navigation > ul > li > a:hover {
-   color: black;
-   background-color: white;
-   border-radius: 10%;
-   padding: 2px;
-   text-decoration: none;
-   font-weight: bold;
+  color: black;
+  background-color: white;
+  border-radius: 10%;
+  padding: 2px;
+  text-decoration: none;
+  font-weight: bold;
 }
 /* Makes the banner panel have top and bottom padding*/
 
 .banner_pane {
-   padding: 20% 0%;
+  padding: 20% 0%;
 }
 /* Making Pane Divs Columns and giving them padding.*/
 
 .pane {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-evenly;
-   padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 3%;
 
 }
 /*Setting Title Size and Margin */
 
 .pane > .title {
-   font-size: 140%;
-   margin: 4% 0%;
+  font-size: 140%;
+  margin: 4% 0%;
 }
 
 /* Styling Text Content of Pane */
 
 .pane__left__text-content {
-   display: flex;
-   flex-direction: column;
-   padding-left: 10%;
-   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  margin-bottom: 20px;
 }
 
 /*Giving Text in Text Content Block Color*/
 
 .pane__left__text-content > span {
-   margin-bottom: 10px;
-   text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 10px;
+  text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
 }
 /* Setting Font on Left Pane class to fancy text */
 
 .pane__left__text-content__heading {
-   font-family: RainbowDreams;
-   font-size: 600%;
+  font-family: RainbowDreams;
+  font-size: 600%;
 }
 
 /* Sizing the left pane to 50% */
 
 .pane__left__text-content__content {
-   width: 50%;
+  width: 50%;
 }
 
 /* About Panel Coloring and Display*/
 #about {
-   background-color: var(--panel-dark-color);
-   display: flex;
-   justify-content: space-evenly;
+  background-color: var(--panel-dark-color);
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* About Panel Content Spacing*/
 #about > .content {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-between;
-   width: 70%;
-   margin: 2% 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  margin: 2% 0%;
 }
 /* Setting The First Child of Content (Titles) to be spaced and sized correctly*/
 
 .content > :first-child {
-   margin: 10px 0px;
-   font-size: 200%;
+  margin: 10px 0px;
+  font-size: 200%;
 }
 
 /* Spacing About Text Content Margin Correctly*/
 
 .about__text-content {
-   margin-top: 10px;
+  margin-top: 10px;
 }
 
 /* Counter Element Styling to Space Numbers */
 
 .counter {
-   display: flex;
-   flex-direction: row;
-   padding: 20px 0px;
-   justify-content: space-between;
-   width: 70%;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px;
+  justify-content: space-between;
+  width: 70%;
 }
 
 /* Counter Element Text Styling Center Numbers and Bold Them */
 
 .counter__text {
-   text-align: center;
-   font-size: 80%;
-   font-weight: bol der;
+  text-align: center;
+  font-size: 80%;
+  font-weight: bol der;
 }
 
 /* Counter Statistic Text Styling */
 
 .stat {
-   margin-bottom: 10px;
-   font-weight: bolder;
-   font-size: 200%;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  font-size: 200%;
 }
 /* Counter Containers Styling */
 
 .counter > div {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+
+#featured-project {
+  background-color: var(--panel-light-color);
+
+}
 /* Work Container Styling with Background Color */
 
 #work {
-   background-color: var(--panel-light-color);
+  background-color: var(--panel-dark-color);
 }
 
 /* Tiles Container in Work Container Styling */
 
 
 .tiles {
-   display: flex;
-   justify-content: space-around;
-   flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /* Tile Styling (Mobile Friendly With Max and Min Width*/
 
 .tile {
-   display:block;
-   width: 25%;
-   max-width: 400px;
-   min-width: 155px;
+  display:block;
+  width: 25%;
+  max-width: 400px;
+  min-width: 155px;
 }
 
 /* Styling Continers Inside Tile Container to Fill Tile Completely  */
 
 .tile > * {
-   width: 100%;
+  width: 100%;
 }
 
 /* Setting Image Tags Inside Image Container To Fit Correctly */
 
 .tile__image > * {
-   height: auto;
-   width: 100%;
-   display: block;
+  height: auto;
+  width: 100%;
+  display: block;
 }
 
 /* Tile Text Styling with Font Style, padding and display */
 
 .tile__text > * {
-   background-color: var(--tile-text-color);
-   display: block;
-   padding: 2% 4%;
-   text-align: left;
-   font-size: 73.6%;
+  background-color: var(--tile-text-color);
+  display: block;
+  padding: 2% 4%;
+  text-align: left;
+  font-size: 73.6%;
 }
 
 /* Setting First Text Element (Title) in tile to style well */
 
 .tile__text > :first-child {
-   padding-top: 10px;
-   text-align: center;
+  padding-top: 10px;
+  text-align: center;
 }
 
 /* Setting Roles Color To Stand out */
 
 .tile__text__roles {
-   color: #01697F;
+  color: #01697F;
 }
 
 
 /* Setting Tile Description Text Style and Padding */
 
 .tile__text__description {
-   color: #303030;
-   padding-bottom: 5%;
+  color: #303030;
+  padding-bottom: 5%;
 }
 
 
 /* Tile Name Text Styling */
 
 .tile__name {
-   text-align: center;
-   margin-top: 10%;
-   font-size: 150%;
-   font-weight: lighter;
+  text-align: center;
+  margin-top: 10%;
+  font-size: 150%;
+  font-weight: lighter;
 }
 
 /* Blog Preview Pane Background Styling */
 
 #blog {
-   background-color: var(--panel-dark-color);
-   
+  background-color: var(--panel-light-color);
+  
 }
 
 /* Blog Tile Width Setting */
 
 #blog > .tiles > * {
-   width: 30%;
+  width: 30%;
 }
 
 /* Blog Tiles Image Styling and Text On Top of Image */
 
 #blog > .tiles > .tile > .tile__image {
-   padding: 2% 0%;
-   text-align: center;
-   margin: 0 auto;
-   font-family: RainbowDreams;
-   font-size: 500%;
-   font-weight: lighter;
+  padding: 2% 0%;
+  text-align: center;
+  margin: 0 auto;
+  font-family: RainbowDreams;
+  font-size: 500%;
+  font-weight: lighter;
 }
 
 
 /* Link to Read More In Blog Coloring */
 
 #blog > .tiles > .tile > .tile__text .tile__text__description > a {
-   color: #2963FD;
+  color: #2963FD;
 }
 
 /* Setting Tile Image for Each Blog Preview */
 
 #blog > .tiles > .tile__one > .tile__image {
-   background-image: url(/resources/img/blog/blog-img-1.png);
-   background-size: cover;    
+  background-image: url(/resources/img/blog/blog-img-1.png);
+  background-size: cover;    
 }
 
 /* Setting Tile Image for Each Blog Preview */
 
 #blog > .tiles > .tile__two > .tile__image {
-   background-image: url(/resources/img/blog/blog-img-2.png);
-   background-size: cover;    
+  background-image: url(/resources/img/blog/blog-img-2.png);
+  background-size: cover;    
 }
 
 /* Setting Tile Image for Each Blog Preview */
 
 #blog > .tiles > .tile__three > .tile__image {
-   background-image: url(/resources/img/blog/blog-img-3.png);
-   background-size: cover;    
+  background-image: url(/resources/img/blog/blog-img-3.png);
+  background-size: cover;    
 }
 
 /* Setting  Blog Tags Styling*/
 
 
 .tags {
-   font-size: 15%;
-   text-align: right;
+  font-size: 15%;
+  text-align: right;
 }
 
 /* Setting Contact Pane Background Color */
 
 #contact {
-   background-color: #101010;
+  background-color: #101010;
 }
 
 /* Setting Contact Form to Fit Screen, and it's contents to wrap correctly */
 
 .contact-form {
-   display: flex;
-   width: 100%;
+  display: flex;
+  width: 100%;
 
-   flex-direction: column;
-   margin-bottom: 10px;
-   align-items:center;
-   justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items:center;
+  justify-content: space-between;
 }
 
 /* Spacing Form Elements */
 
 .contact-form > form > * {
-   margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 
 /* Setting Border at Bottom of Text Fields */
 
 .contact-form > form > div > * {
-   border-bottom-color: #015A71;
-   border-bottom-width: 2px;
-   border-bottom-style: solid;
-   margin-bottom: 20px;
+  border-bottom-color: #015A71;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  margin-bottom: 20px;
 }
 
 /* Spacing Name from Email*/
 
 .contact-form > form > div:first-child {
-   margin-right: 10px;
+  margin-right: 10px;
 }
 
 /* Spacing Button Correctly */
 
 .contact-form > form > div:last-child {
-   display: flex;
-   justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Setting Background Attributes */
 
 .contact-form > form > div:last-child > button {
-   background-color: #00323C;
-   border-radius: 10%;
-   border:0;
-   padding: 4% 6%;
+  background-color: #00323C;
+  border-radius: 10%;
+  border:0;
+  padding: 4% 6%;
 
 }
 /* Setting Message Styling*/
 
 .contact-form > form > div:nth-last-child(2) > input {
-   width: 100%;
-   display:flex;
-   justify-content: space-around
+  width: 100%;
+  display:flex;
+  justify-content: space-around
 }
 
 /* Setting Footer Styles */
 
 .footer {
-	padding: 3% 5%;
-	background-color: #000000;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
+  padding: 3% 5%;
+  background-color: #000000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#image-title {
+  background-color: #101010;
+  padding:20px;
+  text-align: center;
+}
+.overlay:hover {
+  
+}
+
+.preview-tiles {
+  background-color: #101010;
+  padding:20px;
+}
+i {
+  outline-width: 10px;
+  outline-color: black;
+  width:20px;
+  text-shadow: 0px 0px 3px #000;
+}
+
+.left{
+  text-align: left;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.right{
+  text-align: right;
+  margin-right: 20px;
+  padding-right: 10px;
+  color:Red;
+}
+
+
+
+
+.fas  .fa-arrow-right g g path {
+  stroke: black;
+  stroke-width: 10px;
+}
+
+
+.description {
+   width: 50vw;
+   margin-bottom: 30px;
+}
+
+#report {
+  background-color: var(--panel-light-color);
+
+}
+
+#moderation {
+  background-color: var(--panel-dark-color);
+
+}
+
+#prioritisation {
+  background-color: var(--panel-light-color);
+
+}
+
+#task-allocation {
+  background-color: var(--panel-dark-color);
+
+}
+
+.image-pane {
+   padding: 10% 0;
+}
+
+.image-pane > p {
+   margin: 0% 20%;
+   margin-top: 10px;
+   font-size: 12px;
+}
+
+.image-pame > h1 {
+   font-size: x-large;
+}
+
+.toImageMap > button {
+  background-color: #00323C;
+  border-radius: 5%;
+  border: 0;
+  padding: 4% 6%;
 }
 
 /* Making it Mobile Friendly With Flex Directions and Text Alignment */ 
 @media only screen and (max-width: 600px) {
-    .tiles {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #blog > .tiles > *, .tiles > *{
-        margin-bottom: 30px;
-        width: 80%;
-    }
+   .tiles {
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   #blog > .tiles > *, .tiles > *{
+       margin-bottom: 30px;
+       width: 80%;
+   }
 
-    .counter {
-        width: auto;
-    }
+   .counter {
+       width: auto;
+   }
 
-    .title {
-        text-align: center;
-    }
+   .title {
+       text-align: center;
+   }
 
-    .contact-form {
-        text-align: center;
-    }
-    #contact > .title {
-        margin: 40px 0px;
-    }
+   .contact-form {
+       text-align: center;
+   }
+   #contact > .title {
+       margin: 40px 0px;
+   }
 
-    .contact-form:last-child {
-        width:80%;
-    }
+   .contact-form:last-child {
+       width:80%;
+   }
 
-    .footer {
-        font-size: 60%;
-    }
+   .footer {
+       font-size: 60%;
+   }
+
+  
 
 }

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./resources/styles/main.css">
+    </head>
+    <body style="background-color: var(--panel-dark-color)">
+        <div class="image-pane">
+            <h1 style="text-align: center; margin: 50px 0px; font-weight:bold">Shout Out Process</h1>
+            <p>Shout Out's a project of mine which won ESRI's Young Scholar of the Year award. It is a community based reporting platform which intends to revolutionise the current reporting process. It's a platform that provides a wholistic solution with multiple phases. </p>
+            <p>The diagram below shows the phases of the solution, with each phase having their own web application. </p>
+
+            <p>Select any phase on the diagram below to understand.</p>
+            <div class="map" style="display: flex; justify-content: center; margin-top: 50px">
+                <img src="resources/img/map.png" width="448px" height="138px" alt="process" usemap="#image-map">  
+                <map name="image-map">
+                        <area target="_self" alt="Community Report" title="Community Report" href="#report" coords="108,124,8,12" shape="rect">
+                        <area target="_self" alt="Moderation" title="Moderation" href="#moderation" coords="219,126,119,12" shape="rect">
+                        <area target="_self" alt="Prioritisation" title="Prioritisation" href="#prioritisation" coords="234,11,326,127" shape="rect">
+                        <area target="_self" alt="Task Allocation" title="Task Allocation" href="#task-allocation" coords="342,13,436,130" shape="rect">
+                </map>
+            </div>
+        </div>
+        <div class="pane image-pane" id="report">
+            <h1>Report</h1>
+            <p>Community Reporting is done through a single Survey123 form which serves all members of every state that utilizes the service. The community users are prompted to provide their details and summary of the incident with a photograph. The form is accessible through a platform agnostic web application as well as through a native mobile application.  </p>
+            <p>Shout Out’s reporting platform removes previous barrier of finding the correct liaison and getting in touch.</p>
+        </div>
+
+        <div class="pane image-pane" id="moderation">
+            <h1>Moderation</h1>
+            <p>In order to validate the reports, the community reports are all collated and displayed in an ESRI Web Application with an interactive map. The moderation team evaluates each incident and verifies it by contacting the reporter directly. Upon contact, any extra details are noted down and the report is marked as verified in the system. </p>
+            <p>The Moderation Web Application allows the moderators to modify the incident's details, location and contact information of the reporter.</p>
+        </div>
+
+        <div class="pane image-pane" id="prioritisation">
+            <h1>Prioritisation</h1>
+            <p>After the reports have been moderated, they are allocated to the relevant state. Each state has its own unique dashboard. The dashboards contain all the incidents on an interactive web map for the relevant state, with real time statistics based on the region of the map being observed</p>
+        </div>
+
+        <div class="pane image-pane" id="task-allocation">
+            <h1>Task Allocation</h1>
+          <p>The tasks are finally allocated to the departments utilizing ESRI Workforce which is able to assign tasks to each department. It is assumed that each individual department already has a task management system, hence each member of the department is not assigned tasking through ESRI Workforce. </p>  
+        <p>However, in the case that there is no pre-existing task management system, ESRI Workforce would be able to assign each issue with data to each individual in the department. Note: Member specific dashboards are not implemented as of writing.</p>
+        </div>
+    </body>
+</html>
