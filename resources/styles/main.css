@@ -203,13 +203,13 @@ li {
 
 
 #featured-project {
-  background-color: var(--panel-light-color);
+   background-color: var(--panel-light-color);
 
 }
 /* Work Container Styling with Background Color */
 
 #work {
-  background-color: var(--panel-dark-color);
+   background-color: var(--panel-dark-color);
 }
 
 /* Tiles Container in Work Container Styling */
@@ -288,8 +288,8 @@ li {
 /* Blog Preview Pane Background Styling */
 
 #blog {
-  background-color: var(--panel-light-color);
-  
+   background-color: var(--panel-light-color);
+   
 }
 
 /* Blog Tile Width Setting */
@@ -421,93 +421,93 @@ li {
 }
 
 #image-title {
-  background-color: #101010;
-  padding:20px;
-  text-align: center;
+   background-color: #101010;
+   padding:20px;
+   text-align: center;
 }
 .overlay:hover {
-  
+   
 }
 
 .preview-tiles {
-  background-color: #101010;
-  padding:20px;
+   background-color: #101010;
+   padding:20px;
 }
 i {
-  outline-width: 10px;
-  outline-color: black;
-  width:20px;
-  text-shadow: 0px 0px 3px #000;
-}
+   outline-width: 10px;
+   outline-color: black;
+   width:20px;
+   text-shadow: 0px 0px 3px #000;
+ }
 
-.left{
-  text-align: left;
-  margin-left: 20px;
-  padding-left: 10px;
-}
+ .left{
+   text-align: left;
+   margin-left: 20px;
+   padding-left: 10px;
+ }
 
-.right{
-  text-align: right;
-  margin-right: 20px;
-  padding-right: 10px;
-  color:Red;
-}
-
-
-
-
-.fas  .fa-arrow-right g g path {
-  stroke: black;
-  stroke-width: 10px;
+ .right{
+   text-align: right;
+   margin-right: 20px;
+   padding-right: 10px;
+   color:Red;
 }
 
 
-.description {
-   width: 50vw;
-   margin-bottom: 30px;
-}
+ 
 
-#report {
-  background-color: var(--panel-light-color);
+ .fas  .fa-arrow-right g g path {
+   stroke: black;
+   stroke-width: 10px;
+ }
 
-}
 
-#moderation {
-  background-color: var(--panel-dark-color);
+ .description {
+    width: 50vw;
+    margin-bottom: 30px;
+ }
 
-}
+ #report {
+   background-color: var(--panel-light-color);
 
-#prioritisation {
-  background-color: var(--panel-light-color);
+ }
 
-}
+ #moderation {
+   background-color: var(--panel-dark-color);
 
-#task-allocation {
-  background-color: var(--panel-dark-color);
+ }
 
-}
+ #prioritisation {
+   background-color: var(--panel-light-color);
 
-.image-pane {
-   padding: 10% 0;
-}
+ }
 
-.image-pane > p {
-   margin: 0% 20%;
-   margin-top: 10px;
-   font-size: 12px;
-}
+ #task-allocation {
+   background-color: var(--panel-dark-color);
 
-.image-pame > h1 {
-   font-size: x-large;
-}
+ }
 
-.toImageMap > button {
-  background-color: #00323C;
-  border-radius: 5%;
-  border: 0;
-  padding: 4% 6%;
-}
+ .image-pane {
+    padding: 10% 0;
+ }
 
+ .image-pane > p {
+    margin: 0% 20%;
+    margin-top: 10px;
+    font-size: 12px;
+ }
+
+ .image-pame > h1 {
+    font-size: x-large;
+ }
+
+ .toImageMap > button {
+   background-color: #00323C;
+   border-radius: 5%;
+   border: 0;
+   padding: 4% 6%;
+ }
+ 
 /* Making it Mobile Friendly With Flex Directions and Text Alignment */ 
 @media only screen and (max-width: 600px) {
    .tiles {
@@ -543,6 +543,6 @@ i {
        font-size: 60%;
    }
 
-  
+   
 
 }
