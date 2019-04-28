@@ -1,16 +1,22 @@
 /* Importing Fonts */
+
 @font-face {
-   font-family: RainbowDreams;
-   src: url("fonts/Rainbow\ Dreams.otf") format("opentype");
+  font-family: RainbowDreams;
+  src: url("fonts/Rainbow\ Dreams.otf") format("opentype");
 }
 
+
 /* Utilizing Root Psuedoclass to Store CSS Variables that I will Use Throughout Project*/
+
 :root {
   --heading-color: #FFFFFF;
   --tile-text-color: #f8f8f8;
   --panel-dark-color: #00232A;
   --panel-light-color: #01697F;
 }
+
+
+/* Normalising CSS on all browsers to look as I define in the following rules */
 
 * {
   margin: 0;
@@ -25,9 +31,15 @@
   font-weight: lighter;
 }
 
+
+/* Removing Bullet Points on Lists */
+
 ul {
   list-style-type: none;
 }
+
+
+/* Adding extra margin on list elements (for navbar)*/
 
 li {
   float: left;
@@ -43,28 +55,34 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
 /* Setting up Navbar To Display As Intended */
 
 .navbar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
 }
+
+
 /* Giving Navbar Some Spacing away from edge of screen */
 
 .navbar__social-panel {
   padding: 20px 10px 0px 0px;
 }
 
+
 /* Making the list element of the navbar social panel display as a row*/
 
-.navbar__social-panel > ul {
+.navbar__social-panel>ul {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
 
 /* Navbar Navigation Panel also getting padding to make it bigger*/
 
@@ -72,16 +90,18 @@ li {
   padding: 20px 0px 0px 40px;
 }
 
+
 /* Making Eeach Link in Navbar navigation the heading color */
 
-.navbar__navigation > ul > li > a {
+.navbar__navigation>ul>li>a {
   color: var(--heading-color);
   text-decoration: none;
 }
 
+
 /* Hover over navbar link makes it style specially */
 
-.navbar__navigation > ul > li > a:hover {
+.navbar__navigation>ul>li>a:hover {
   color: black;
   background-color: white;
   border-radius: 10%;
@@ -89,11 +109,15 @@ li {
   text-decoration: none;
   font-weight: bold;
 }
+
+
 /* Makes the banner panel have top and bottom padding*/
 
 .banner_pane {
   padding: 20% 0%;
 }
+
+
 /* Making Pane Divs Columns and giving them padding.*/
 
 .pane {
@@ -102,14 +126,16 @@ li {
   align-items: center;
   justify-content: space-evenly;
   padding-bottom: 3%;
-
 }
+
+
 /*Setting Title Size and Margin */
 
-.pane > .title {
+.pane>.title {
   font-size: 140%;
   margin: 4% 0%;
 }
+
 
 /* Styling Text Content of Pane */
 
@@ -120,12 +146,15 @@ li {
   margin-bottom: 20px;
 }
 
+
 /*Giving Text in Text Content Block Color*/
 
-.pane__left__text-content > span {
+.pane__left__text-content>span {
   margin-bottom: 10px;
   text-shadow: 2px 1.5px rgba(0, 0, 0, 0.7);
 }
+
+
 /* Setting Font on Left Pane class to fancy text */
 
 .pane__left__text-content__heading {
@@ -133,21 +162,26 @@ li {
   font-size: 600%;
 }
 
+
 /* Sizing the left pane to 50% */
 
 .pane__left__text-content__content {
   width: 50%;
 }
 
+
 /* About Panel Coloring and Display*/
+
 #about {
   background-color: var(--panel-dark-color);
   display: flex;
   justify-content: space-evenly;
 }
 
+
 /* About Panel Content Spacing*/
-#about > .content {
+
+#about>.content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -155,18 +189,22 @@ li {
   width: 70%;
   margin: 2% 0%;
 }
+
+
 /* Setting The First Child of Content (Titles) to be spaced and sized correctly*/
 
-.content > :first-child {
+.content> :first-child {
   margin: 10px 0px;
   font-size: 200%;
 }
+
 
 /* Spacing About Text Content Margin Correctly*/
 
 .about__text-content {
   margin-top: 10px;
 }
+
 
 /* Counter Element Styling to Space Numbers */
 
@@ -178,6 +216,7 @@ li {
   width: 70%;
 }
 
+
 /* Counter Element Text Styling Center Numbers and Bold Them */
 
 .counter__text {
@@ -186,6 +225,7 @@ li {
   font-weight: bol der;
 }
 
+
 /* Counter Statistic Text Styling */
 
 .stat {
@@ -193,27 +233,29 @@ li {
   font-weight: bolder;
   font-size: 200%;
 }
+
+
 /* Counter Containers Styling */
 
-.counter > div {
+.counter>div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
 #featured-project {
-   background-color: var(--panel-light-color);
-
+  background-color: var(--panel-light-color);
 }
+
+
 /* Work Container Styling with Background Color */
 
 #work {
-   background-color: var(--panel-dark-color);
+  background-color: var(--panel-dark-color);
 }
 
-/* Tiles Container in Work Container Styling */
 
+/* Tiles Container in Work Container Styling */
 
 .tiles {
   display: flex;
@@ -221,32 +263,36 @@ li {
   flex-wrap: wrap;
 }
 
+
 /* Tile Styling (Mobile Friendly With Max and Min Width*/
 
 .tile {
-  display:block;
+  display: block;
   width: 25%;
   max-width: 400px;
   min-width: 155px;
 }
 
+
 /* Styling Continers Inside Tile Container to Fill Tile Completely  */
 
-.tile > * {
+.tile>* {
   width: 100%;
 }
 
+
 /* Setting Image Tags Inside Image Container To Fit Correctly */
 
-.tile__image > * {
+.tile__image>* {
   height: auto;
   width: 100%;
   display: block;
 }
 
+
 /* Tile Text Styling with Font Style, padding and display */
 
-.tile__text > * {
+.tile__text>* {
   background-color: var(--tile-text-color);
   display: block;
   padding: 2% 4%;
@@ -254,12 +300,14 @@ li {
   font-size: 73.6%;
 }
 
+
 /* Setting First Text Element (Title) in tile to style well */
 
-.tile__text > :first-child {
+.tile__text> :first-child {
   padding-top: 10px;
   text-align: center;
 }
+
 
 /* Setting Roles Color To Stand out */
 
@@ -285,22 +333,24 @@ li {
   font-weight: lighter;
 }
 
+
 /* Blog Preview Pane Background Styling */
 
 #blog {
-   background-color: var(--panel-light-color);
-   
+  background-color: var(--panel-light-color);
 }
+
 
 /* Blog Tile Width Setting */
 
-#blog > .tiles > * {
+#blog>.tiles>* {
   width: 30%;
 }
 
+
 /* Blog Tiles Image Styling and Text On Top of Image */
 
-#blog > .tiles > .tile > .tile__image {
+#blog>.tiles>.tile>.tile__image {
   padding: 2% 0%;
   text-align: center;
   margin: 0 auto;
@@ -312,38 +362,42 @@ li {
 
 /* Link to Read More In Blog Coloring */
 
-#blog > .tiles > .tile > .tile__text .tile__text__description > a {
+#blog>.tiles>.tile>.tile__text .tile__text__description>a {
   color: #2963FD;
 }
 
+
 /* Setting Tile Image for Each Blog Preview */
 
-#blog > .tiles > .tile__one > .tile__image {
+#blog>.tiles>.tile__one>.tile__image {
   background-image: url(/resources/img/blog/blog-img-1.png);
-  background-size: cover;    
+  background-size: cover;
 }
+
 
 /* Setting Tile Image for Each Blog Preview */
 
-#blog > .tiles > .tile__two > .tile__image {
+#blog>.tiles>.tile__two>.tile__image {
   background-image: url(/resources/img/blog/blog-img-2.png);
-  background-size: cover;    
+  background-size: cover;
 }
+
 
 /* Setting Tile Image for Each Blog Preview */
 
-#blog > .tiles > .tile__three > .tile__image {
+#blog>.tiles>.tile__three>.tile__image {
   background-image: url(/resources/img/blog/blog-img-3.png);
-  background-size: cover;    
+  background-size: cover;
 }
+
 
 /* Setting  Blog Tags Styling*/
-
 
 .tags {
   font-size: 15%;
   text-align: right;
 }
+
 
 /* Setting Contact Pane Background Color */
 
@@ -351,63 +405,69 @@ li {
   background-color: #101010;
 }
 
+
 /* Setting Contact Form to Fit Screen, and it's contents to wrap correctly */
 
 .contact-form {
   display: flex;
   width: 100%;
-
   flex-direction: column;
   margin-bottom: 10px;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
 }
 
+
 /* Spacing Form Elements */
 
-.contact-form > form > * {
+.contact-form>form>* {
   margin-bottom: 20px;
 }
 
 
 /* Setting Border at Bottom of Text Fields */
 
-.contact-form > form > div > * {
+.contact-form>form>div>* {
   border-bottom-color: #015A71;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   margin-bottom: 20px;
 }
 
+
 /* Spacing Name from Email*/
 
-.contact-form > form > div:first-child {
+.contact-form>form>div:first-child {
   margin-right: 10px;
 }
 
+
 /* Spacing Button Correctly */
 
-.contact-form > form > div:last-child {
+.contact-form>form>div:last-child {
   display: flex;
   justify-content: space-around;
 }
 
+
 /* Setting Background Attributes */
 
-.contact-form > form > div:last-child > button {
+.contact-form>form>div:last-child>button {
   background-color: #00323C;
   border-radius: 10%;
-  border:0;
+  border: 0;
   padding: 4% 6%;
-
 }
+
+
 /* Setting Message Styling*/
 
-.contact-form > form > div:nth-last-child(2) > input {
+.contact-form>form>div:nth-last-child(2)>input {
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: space-around
 }
+
 
 /* Setting Footer Styles */
 
@@ -420,129 +480,174 @@ li {
   align-items: center;
 }
 
+
+/*  CSS For Gallery */
+
+
+/* Setting Title of Image Font and Padding */
+
 #image-title {
-   background-color: #101010;
-   padding:20px;
-   text-align: center;
+  background-color: #101010;
+  padding: 20px;
+  text-align: center;
 }
-.overlay:hover {
-   
-}
+
+
+/* Setting Preview Tile's Container Background Color to balck and padding it to match theme */
 
 .preview-tiles {
-   background-color: #101010;
-   padding:20px;
+  background-color: #101010;
+  padding: 20px;
 }
+
+
+/* Setting Link of Font Awesome Icons to Have Outline and Decent Size for gallery buttons*/
+
 i {
-   outline-width: 10px;
-   outline-color: black;
-   width:20px;
-   text-shadow: 0px 0px 3px #000;
- }
-
- .left{
-   text-align: left;
-   margin-left: 20px;
-   padding-left: 10px;
- }
-
- .right{
-   text-align: right;
-   margin-right: 20px;
-   padding-right: 10px;
-   color:Red;
+  outline-width: 10px;
+  outline-color: black;
+  width: 20px;
+  text-shadow: 0px 0px 3px #000;
 }
 
 
- 
+/* Setting Left Button Styling on Overlay on Image*/
 
- .fas  .fa-arrow-right g g path {
-   stroke: black;
-   stroke-width: 10px;
- }
+.left {
+  text-align: left;
+  margin-left: 20px;
+  padding-left: 10px;
+}
 
 
- .description {
-    width: 50vw;
-    margin-bottom: 30px;
- }
+/* Setting Right Button Styling on Overlay on Image*/
 
- #report {
-   background-color: var(--panel-light-color);
+.right {
+  text-align: right;
+  margin-right: 20px;
+  padding-right: 10px;
+  color: Red;
+}
 
- }
 
- #moderation {
-   background-color: var(--panel-dark-color);
+/* Setting Font Awesome Arrow Styling*/
 
- }
+.fas .fa-arrow-right g g path {
+  stroke: black;
+  stroke-width: 10px;
+}
 
- #prioritisation {
-   background-color: var(--panel-light-color);
 
- }
+/* Setting Description for Featured Project Section with right width and margin*/
 
- #task-allocation {
-   background-color: var(--panel-dark-color);
+.description {
+  width: 50vw;
+  margin-bottom: 30px;
+}
 
- }
 
- .image-pane {
-    padding: 10% 0;
- }
+/* Setting Image Panel Padding for Decent Fitting */
 
- .image-pane > p {
-    margin: 0% 20%;
-    margin-top: 10px;
-    font-size: 12px;
- }
+.image-pane {
+  padding: 10% 0;
+}
 
- .image-pame > h1 {
-    font-size: x-large;
- }
 
- .toImageMap > button {
-   background-color: #00323C;
-   border-radius: 5%;
-   border: 0;
-   padding: 4% 6%;
- }
- 
-/* Making it Mobile Friendly With Flex Directions and Text Alignment */ 
+/* Setting Image Panel paragraph margins and font sizing for legible and clean text*/
+
+.image-pane>p {
+  margin: 0% 20%;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+
+/* Setting Heading 1 Under the Image Panel to Large to Stand Out */
+
+.image-pame>h1 {
+  font-size: x-large;
+}
+
+
+/* Setting up Image Map Segue Button to look like the theme's without affecting
+the arrow buttons on the gallery section */
+
+.toImageMap>button {
+  background-color: #00323C;
+  border-radius: 5%;
+  border: 0;
+  padding: 4% 6%;
+}
+
+
+/* Image Map Styling */
+
+
+/* Setting Report Background Color to fit with current theme */
+
+#report {
+  background-color: var(--panel-light-color);
+}
+
+
+/* Setting Moderation Background Color to fit with current theme */
+
+#moderation {
+  background-color: var(--panel-dark-color);
+}
+
+
+/* Setting Prioritisation Background color to fit with current theme */
+
+#prioritisation {
+  background-color: var(--panel-light-color);
+}
+
+
+/* Setting Task Allocation Background color to fit with current theme */
+
+#task-allocation {
+  background-color: var(--panel-dark-color);
+}
+
+
+/* Making it Mobile Friendly With Flex Directions and Text Alignment */
+
 @media only screen and (max-width: 600px) {
-   .tiles {
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-   }
-   #blog > .tiles > *, .tiles > *{
-       margin-bottom: 30px;
-       width: 80%;
-   }
-
-   .counter {
-       width: auto;
-   }
-
-   .title {
-       text-align: center;
-   }
-
-   .contact-form {
-       text-align: center;
-   }
-   #contact > .title {
-       margin: 40px 0px;
-   }
-
-   .contact-form:last-child {
-       width:80%;
-   }
-
-   .footer {
-       font-size: 60%;
-   }
-
-   
-
+  /* Changing Flex Direction to Fit Vertical Screen */
+  .tiles {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Making Tiles Wider to Fill More of the Screen */
+  #blog>.tiles>*,
+  .tiles>* {
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  /* Fixing Counter Width to Fill on Mobile*/
+  .counter {
+    width: auto;
+  }
+  /* Centering Titles on Mobile as I prefer the aesthetic on smaller screens */
+  .title {
+    text-align: center;
+  }
+  /* Centering Contact form Elements on mobile */
+  .contact-form {
+    text-align: center;
+  }
+  /* Decreasing Margin Title on Mobile so it looks 'right'*/
+  #contact>.title {
+    margin: 40px 0px;
+  }
+  /* Making Contact form button wider on mobile */
+  .contact-form:last-child {
+    width: 80%;
+  }
+  /* Decreasing footer font size on mobile as it looks too big with normal*/
+  .footer {
+    font-size: 60%;
+  }
 }

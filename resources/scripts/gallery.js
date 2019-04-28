@@ -9,17 +9,21 @@
   Utilising Global Array to Store All Image Objects with Title,
   Description (not shown on current model), Source of Image
 */
-this.images = [
+this.images = [{
+    title: 'Shout Out\'s Award Win',
+    description: 'Shout Out Won Young Scholar of The Year Award 2019',
+    source: 'resources/img/featured-project/ys-award.png',
+  },
   {
     title: 'Shout Out\'s Process Overview',
     description: 'Shout Out\'s Process is composed of four phases, Community Reprting, Moderation, Prioritsation and Task Allocation.',
     source: 'resources/img/map.png',
   },
   {
-    title: 'Community Reporting Shout Out Through Survey123',
+    title: 'Community Reporting Shout Out',
     description: '',
     source: 'resources/img/featured-project/ip.png',
-  }, 
+  },
   {
     title: 'Moderation Panel Through Web Map Application',
     description: '',
@@ -34,6 +38,26 @@ this.images = [
     title: 'Task Allocation Through Dashboard',
     description: '',
     source: 'resources/img/featured-project/task-allocation.png',
+  },
+  {
+    title: 'Utilizes an ESRI Stack',
+    description: '',
+    source: 'resources/img/featured-project/ss.png',
+  },
+  {
+    title: 'Survey123 Architecture',
+    description: '',
+    source: 'resources/img/featured-project/survey.png',
+  },
+  {
+    title: 'Platform Agnostic Solution',
+    description: '',
+    source: 'resources/img/featured-project/pa.png',
+  },
+  {
+    title: 'Full Interactive Web Maps for Visualisation',
+    description: '',
+    source: 'resources/img/featured-project/wm.png',
   },
 ];
 
@@ -68,10 +92,10 @@ const generateImageTiles = () => {
   const tileContainer = document.getElementsByClassName('preview-tiles')[0];
   const widthAvailable = document.getElementsByClassName('image')[0].clientWidth;
   let imageSide = (widthAvailable) / images.length;
-  while(imageSide > tileContainer.clientHeight) {
-    imageSide-= 1;
+  while (imageSide > tileContainer.clientHeight) {
+    imageSide -= 1;
   }
-  for(const image of images) {
+  for (const image of images) {
     const img = document.createElement('img');
     img.setAttribute('src', `${image.source}`);
     img.setAttribute('width', imageSide);
@@ -117,7 +141,7 @@ const sizeOverlays = (resize) => {
   Description: When the window loads, I set the image preview to the first image in array.
   size the button overlay and then size the image preview window.
 */
-window.onload = function () {
+window.onload = function() {
   switchImage(0);
   sizeOverlays(false);
 };
@@ -126,7 +150,7 @@ window.onload = function () {
   Function Name: None (Anonymous)
   Description: On window resize the button overlays will be resized to adapt to window changing
 */
-window.onresize = function () {
+window.onresize = function() {
   sizeOverlays(true);
   sizeImagePreview();
 };
@@ -137,7 +161,7 @@ window.onresize = function () {
   Switches image based on global current image index variable.
 */
 const nextImage = () => {
-  const desiredImageIndex = currentImage +=1;
+  const desiredImageIndex = currentImage += 1;
   if (desiredImageIndex > images.length - 1) {
     currentImage = 0;
   } else {
@@ -153,7 +177,7 @@ const nextImage = () => {
   Switches image based on global current image index variable.
 */
 const prevImage = () => {
-  const desiredImageIndex = currentImage -=1;
+  const desiredImageIndex = currentImage -= 1;
   if (desiredImageIndex < 0) {
     currentImage = images.length - 1;
   } else {
@@ -167,8 +191,8 @@ const prevImage = () => {
   Switches image based on the image which was pressed by passing in the source.
 */
 const clickImage = (source) => {
-  for(let i = 0; i < images.length; i++) {
-    if(images[i].source == source) {
+  for (let i = 0; i < images.length; i++) {
+    if (images[i].source == source) {
       switchImage(i);
       currentImage = i;
       break;
@@ -180,6 +204,6 @@ const clickImage = (source) => {
 
 /*
   Image Tile Generation is Run as first function call in script.
-*/ 
+*/
 
 generateImageTiles();
