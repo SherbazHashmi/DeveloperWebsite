@@ -12,6 +12,7 @@
   --heading-color: #FFFFFF;
   --tile-text-color: #f8f8f8;
   --panel-dark-color: #00232A;
+  --github-hover-bg: rgb(0, 27, 32);
   --panel-light-color: #01697F;
 }
 
@@ -611,9 +612,190 @@ the arrow buttons on the gallery section */
 }
 
 
+/* Making Github Button Float */
+
+#github-button,
+#feed-container {
+  position: fixed;
+  z-index: 100;
+  right: 2%;
+  bottom: 2%;
+}
+
+
+/* Making Github Animate On Hover */
+
+#github-button:hover {
+  animation: shake 1s cubic-bezier(.3, .06, .2, .9) infinite;
+}
+
+
+/* Defining Animations for Github Button in Keyframe Percentages*/
+
+@keyframes shake {
+  10% {
+    transform: translate3d(-1px, -1px, 0) rotate(5deg);
+  }
+  30%,
+  {
+    transform: translate3d(2px, -4px, 0) rotate(-2deg);
+  }
+  90%,
+  {
+    transform: translate3d(-4px, -1px, 0) rotate(3deg);
+  }
+  100% {
+    transform: translate3d(4px, 2px, 0) rotate(-4deg);
+  }
+}
+
+
+/* Setting Feed Container Dimensions and BG Colour */
+
+#feed-container {
+  min-width: 160px;
+  max-width: 300px;
+  width: 30%;
+  padding: 10px;
+  height: 40%;
+  background-color: black;
+}
+
+
+/* Setting Feed Cell Backgrounds based on Light or Dark Classes*/
+
+.light {
+  background-color: var(--panel-light-color);
+}
+
+.dark {
+  background-color: var(--panel-dark-color);
+}
+
+
+/* Setting Styling for Title of Feed Container  */
+
+.feed-container__title {
+  background-color: #010101;
+  margin: -10px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* Spacing the Title of Feed Container's Text Correctly*/
+
+.feed-container__title__text {
+  width: 70%;
+  text-align: right;
+  margin-right: 40px;
+}
+
+
+/* Spacing the Exit Button of Feed Container Correctly */
+
+.feed-container__title__exit {
+  text-align: right;
+  width: 30%;
+  padding-right: 20px;
+}
+
+
+/* Changing Cursor Based on Hover Over Exit Button */
+
+#feed-container__title__exit:hover {
+  cursor: pointer;
+}
+
+
+/* Setting Feed Container Content Spacing and Scrollable */
+
+.feed-container__content {
+  margin: 0px -10px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+
+/* Setting Up Each Feed Cell to Format the Contents with Flexbox*/
+
+.feed-container__content__cell {
+  display: flex;
+  flex-direction: column;
+  font-size: smaller;
+}
+
+
+/* Setting up Each Project's Name with Striking Text and Spacing*/
+
+.feed-container__content__cell__name {
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+
+/* Setting up Each Project's Description with smaller text and spacing .*/
+
+.feed-container__content__cell__description {
+  text-align: left;
+  font-size: smaller;
+  margin: 10px 5px;
+}
+
+
+/* Setting up Each Project's Buttons Container with Flexbox and Spacing  */
+
+.feed-container__content__cell__buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0px;
+}
+
+
+/* Setting up Each Project's Button as Flexbox to Display Button + Label  */
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Coloring in the Buttons White */
+
+.btn>svg {
+  margin-bottom: 5px;
+  fill: white;
+}
+
+
+/* Gallery View Becomes Unpractical to Use Past 882 pixel width so getting rid of it at that point. */
+
+@media only screen and (max-width: 882px) {
+  .gallery {
+    display: none;
+  }
+}
+
+
 /* Making it Mobile Friendly With Flex Directions and Text Alignment */
 
 @media only screen and (max-width: 600px) {
+  /* Hiding the Feed Container on Mobile*/
+  #feed-container {
+    display: none;
+  }
+  /* Hiding the Github Button on Mobile */
+  #github-button {
+    display: none;
+  }
   /* Changing Flex Direction to Fit Vertical Screen */
   .tiles {
     flex-direction: column;
