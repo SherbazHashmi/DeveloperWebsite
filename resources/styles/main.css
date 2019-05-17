@@ -612,7 +612,7 @@ the arrow buttons on the gallery section */
 }
 
 
-/* Making Github Button Float */
+/* Making Feed Buttons Float */
 
 .buttons,
 #feedContainer {
@@ -621,6 +621,17 @@ the arrow buttons on the gallery section */
   right: 2%;
   bottom: 2%;
 }
+
+
+/* Making Feed Container Float higher */
+
+#feedContainer {
+  right: 2%;
+  bottom: 4%;
+}
+
+
+/* Making Feed Buttons Spaced */
 
 .feed-button {
   margin-top: 10px;
@@ -779,9 +790,18 @@ the arrow buttons on the gallery section */
   fill: white;
 }
 
+
+/* Setting Twitter Cell Styles */
+
+
+/* Setting Twitter Cell as Flex Element */
+
 .feedContainer__content__twitter-cell {
   display: flex;
 }
+
+
+/* Setting Twitter Cell Profile Picture Div To Center & Space Image */
 
 .feedContainer__content__twitter-cell__profile-picture {
   display: flex;
@@ -790,13 +810,22 @@ the arrow buttons on the gallery section */
   padding-left: 10px;
 }
 
+
+/* Making Profile Picture Circular */
+
 .feedContainer__content__twitter-cell__profile-picture>img {
   border-radius: 50%;
 }
 
+
+/* Making Profile Text Content Spaced */
+
 .feedContainer__content__twitter-cell__textContent {
   padding: 10px;
 }
+
+
+/* Making Profile Name Bold and Larger */
 
 .feedContainer__content__twitter-cell__textContent> :first-child {
   font-weight: bold;
