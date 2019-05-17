@@ -71,6 +71,7 @@ const getTwitterFeed = async() => {
     // Access Backup Tweets JSON if API not online.
     const tweets = await fetch('https://sherbazhashmi.github.io/resources/data/my_tweets_backup.json');
     twitterFeed = await tweets.json();
+    console.log('hi');
   }
 };
 
