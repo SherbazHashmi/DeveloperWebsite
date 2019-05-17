@@ -58,4 +58,10 @@
   .description {
     width: 80vw;
   }
+  /* Sitemap Width Change*/
+  .map-row,
+  #map {
+    width: 100%;
+    flex-direction: row;
+  }
 }
