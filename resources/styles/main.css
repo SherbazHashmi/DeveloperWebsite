@@ -614,18 +614,22 @@ the arrow buttons on the gallery section */
 
 /* Making Github Button Float */
 
-#github-button,
-#feed-container {
+.buttons,
+#feedContainer {
   position: fixed;
   z-index: 100;
   right: 2%;
   bottom: 2%;
 }
 
+.feed-button {
+  margin-top: 10px;
+}
+
 
 /* Making Github Animate On Hover */
 
-#github-button:hover {
+.button:hover {
   animation: shake 1s cubic-bezier(.3, .06, .2, .9) infinite;
 }
 
@@ -652,7 +656,7 @@ the arrow buttons on the gallery section */
 
 /* Setting Feed Container Dimensions and BG Colour */
 
-#feed-container {
+#feedContainer {
   min-width: 160px;
   max-width: 300px;
   width: 30%;
@@ -675,7 +679,7 @@ the arrow buttons on the gallery section */
 
 /* Setting Styling for Title of Feed Container  */
 
-.feed-container__title {
+.feedContainer__title {
   background-color: #010101;
   margin: -10px;
   margin-bottom: 0px;
@@ -689,7 +693,7 @@ the arrow buttons on the gallery section */
 
 /* Spacing the Title of Feed Container's Text Correctly*/
 
-.feed-container__title__text {
+.feedContainer__title__text {
   width: 70%;
   text-align: right;
   margin-right: 40px;
@@ -698,7 +702,7 @@ the arrow buttons on the gallery section */
 
 /* Spacing the Exit Button of Feed Container Correctly */
 
-.feed-container__title__exit {
+.feedContainer__title__exit {
   text-align: right;
   width: 30%;
   padding-right: 20px;
@@ -707,14 +711,14 @@ the arrow buttons on the gallery section */
 
 /* Changing Cursor Based on Hover Over Exit Button */
 
-#feed-container__title__exit:hover {
+#feedContainer__title__exit:hover {
   cursor: pointer;
 }
 
 
 /* Setting Feed Container Content Spacing and Scrollable */
 
-.feed-container__content {
+.feedContainer__content {
   margin: 0px -10px;
   height: 100%;
   overflow-y: scroll;
@@ -723,7 +727,7 @@ the arrow buttons on the gallery section */
 
 /* Setting Up Each Feed Cell to Format the Contents with Flexbox*/
 
-.feed-container__content__cell {
+.feedContainer__content__cell {
   display: flex;
   flex-direction: column;
   font-size: smaller;
@@ -732,7 +736,7 @@ the arrow buttons on the gallery section */
 
 /* Setting up Each Project's Name with Striking Text and Spacing*/
 
-.feed-container__content__cell__name {
+.feedContainer__content__cell__name {
   display: flex;
   justify-content: center;
   padding: 5px 0px;
@@ -743,7 +747,7 @@ the arrow buttons on the gallery section */
 
 /* Setting up Each Project's Description with smaller text and spacing .*/
 
-.feed-container__content__cell__description {
+.feedContainer__content__cell__description {
   text-align: left;
   font-size: smaller;
   margin: 10px 5px;
@@ -752,7 +756,7 @@ the arrow buttons on the gallery section */
 
 /* Setting up Each Project's Buttons Container with Flexbox and Spacing  */
 
-.feed-container__content__cell__buttons {
+.feedContainer__content__cell__buttons {
   display: flex;
   justify-content: space-around;
   margin: 10px 0px;
@@ -775,6 +779,30 @@ the arrow buttons on the gallery section */
   fill: white;
 }
 
+.feedContainer__content__twitter-cell {
+  display: flex;
+}
+
+.feedContainer__content__twitter-cell__profile-picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.feedContainer__content__twitter-cell__profile-picture>img {
+  border-radius: 50%;
+}
+
+.feedContainer__content__twitter-cell__textContent {
+  padding: 10px;
+}
+
+.feedContainer__content__twitter-cell__textContent> :first-child {
+  font-weight: bold;
+  font-size: larger;
+}
+
 
 /* Gallery View Becomes Unpractical to Use Past 882 pixel width so getting rid of it at that point. */
 
@@ -789,7 +817,7 @@ the arrow buttons on the gallery section */
 
 @media only screen and (max-width: 600px) {
   /* Hiding the Feed Container on Mobile*/
-  #feed-container {
+  #feedContainer {
     display: none;
   }
   /* Hiding the Github Button on Mobile */
