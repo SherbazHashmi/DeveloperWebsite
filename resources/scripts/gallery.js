@@ -73,9 +73,7 @@ let currentImage = 0;
 
 var switchImage = (index) => {
   const image = document.getElementById('galleryImage');
-  console.log(index);
   const source = images[index].source;
-  console.log('Source', source)
   image.setAttribute('src', source);
   const title = document.getElementById('image-title');
   title.innerText = images[index].title;
@@ -88,7 +86,6 @@ var switchImage = (index) => {
     the preview tiles at the bottom of image preview window with them.
 */
 const generateImageTiles = () => {
-  console.log('hi');
   const tileContainer = document.getElementsByClassName('preview-tiles')[0];
   const widthAvailable = document.getElementsByClassName('image')[0].clientWidth;
   let imageSide = (widthAvailable) / images.length;
@@ -152,7 +149,6 @@ window.onload = function() {
 */
 window.onresize = function() {
   sizeOverlays(true);
-  sizeImagePreview();
 };
 
 /*
@@ -168,7 +164,6 @@ const nextImage = () => {
     currentImage = desiredImageIndex;
   }
   switchImage(currentImage);
-  console.log('next');
 };
 
 /*

@@ -1,0 +1,61 @@
+/* Gallery View Becomes Unpractical to Use Past 882 pixel width so getting rid of it at that point. */
+
+@media only screen and (max-width: 882px) {
+  .gallery {
+    display: none;
+  }
+}
+
+
+/* Making it Mobile Friendly With Flex Directions and Text Alignment */
+
+@media only screen and (max-width: 600px) {
+  /* Hiding the Feed Container on Mobile*/
+  #feedContainer {
+    display: none;
+  }
+  /* Hiding the Feed Buttons on Mobile */
+  .buttons {
+    display: none;
+  }
+  /* Changing Flex Direction to Fit Vertical Screen */
+  .tiles {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Making Tiles Wider to Fill More of the Screen */
+  #blog>.tiles>*,
+  .tiles>* {
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  /* Fixing Counter Width to Fill on Mobile*/
+  .counter {
+    width: auto;
+  }
+  /* Centering Titles on Mobile as I prefer the aesthetic on smaller screens */
+  .title {
+    text-align: center;
+  }
+  /* Centering Contact form Elements on mobile */
+  .contact-form {
+    text-align: center;
+  }
+  /* Decreasing Margin Title on Mobile so it looks 'right'*/
+  #contact>.title {
+    margin: 40px 0px;
+  }
+  /* Making Contact form button wider on mobile */
+  .contact-form:last-child {
+    width: 80%;
+  }
+  /* Decreasing footer font size on mobile as it looks too big with normal*/
+  .footer {
+    font-size: 70%;
+  }
+  /* Making Project Description Text Wider */
+  .description {
+    width: 80vw;
+  }
+}
