@@ -67,11 +67,11 @@ const getTwitterFeed = async() => {
     const tweets = await fetch(twitterApiUrl);
     twitterFeed = await tweets.json();
   } catch (e) {
-    console.log(e);
     // Access Backup Tweets JSON if API not online.
     const tweets = await fetch('https://sherbazhashmi.github.io/resources/data/my_tweets_backup.json');
     twitterFeed = await tweets.json();
-    console.log('hi');
+    console.log(e);
+
   }
 };
 
