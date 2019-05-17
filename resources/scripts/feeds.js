@@ -72,7 +72,7 @@ const getTwitterFeed = async() => {
       tweets = await fetch('https://sherbazhashmi.github.io/resources/data/my_tweets_backup.json');
     }
     twitterFeed = await tweets.json();
-    console.log(twitterFeed);
+    console.log(await twitterFeed);
   } catch (e) {
     console.log(e);
   }
