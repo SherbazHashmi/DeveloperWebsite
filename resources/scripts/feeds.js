@@ -1,7 +1,7 @@
 /*
-  Script Name: github-githubFeed.js,
-  Script Description: GitHub Feed populates an HTML div with github repositories (projects).
-  It pulls the data from the GitHub API and presents it using Javascript DOM manipulation.
+  Script Name: feeds.js,
+  Script Description: Feed populates an HTML div with either github repositories (projects) or twitter posts.
+  It pulls the data from the GitHub/My Own Twitter API and presents it using Javascript DOM manipulation.
   Note: Will only work Desktop due to mobile needing greater screen real estate for actual content.
 */
 
@@ -63,9 +63,14 @@ const getGithubFeed = async() => {
   Description: Pulls Twitter Feed from my REST API which interacts with twitter servers.
 */
 const getTwitterFeed = async() => {
-  const tweets = await fetch(twitterApiUrl);
+  let tweets = await fetch(twitterApiUrl);
+  if (tweets.status === 200) {
+    console.log('Got Twitter Feed');
+  } else {
+    // Access Backup Tweets JSON if API not online.
+    tweets = await fetch('https://sherbazhashmi.github.io/resources/data/my_tweets_backup.json');
+  }
   twitterFeed = await tweets.json();
-  console.log('Got Twitter Feed');
 };
 
 /*
@@ -103,8 +108,8 @@ const generateGithubProject = (post) => {
 };
 
 /*
-  Function Name: generateGitHubProject
-  Description: Generates HTML for a Github Project Cell
+  Function Name: generateTwitterPost
+  Description: Generates HTML for a Twitter Post Cell
 */
 
 const generateTwitterPost = (post) => {
@@ -126,7 +131,7 @@ const generateTwitterPost = (post) => {
 
 /*
   Function Name : addPostToFeed
-  Description: Function that takes in a post object and creates it into a HTML node and appends to 
+  Description: Function that takes in a post object and type and creates it into a HTML node and appends to 
   Feed Content DOM element
 */
 
@@ -148,7 +153,7 @@ const addPostToFeed = (post, type) => {
 
 /*
   Function Name : populateFeed
-  Description: Populates the githubFeed with posts utilizing the addPostToFeed function.
+  Description: Populates the feed with posts depending on type utilizing the addPostToFeed function.
 */
 const populateFeed = (type) => {
   feedContentObject.innerHTML = '';
@@ -169,6 +174,12 @@ const populateFeed = (type) => {
 };
 
 
+/*
+  Function Name: hideButtons
+  Description: Hides feed buttons, this is due to buttons needing to be
+  hidden before the REST calls complete successfully.
+*/
+
 const hideButtons = () => {
   const feedButtons = document.getElementsByClassName('feed-button');
   for (let i = 0; i < feedButtons.length; i++) {
@@ -177,6 +188,11 @@ const hideButtons = () => {
   }
 };
 
+
+/*
+  Function Name: showButtons
+  Description: Shows a button based on whether the REST call has completed yet or not
+*/
 const showButton = (type) => {
   const button = document.getElementById(`${type}-button`);
   button.hidden = false;
@@ -188,16 +204,19 @@ const showButton = (type) => {
 */
 
 const setupFeed = async() => {
-    hideButtons();
-    await getGithubFeed();
-    showButton('github');
-    await getTwitterFeed();
-    showButton('twitter');
-    feedsLoaded = true;
-  }
-  /*
+  hideButtons();
+  await getGithubFeed();
+  showButton('github');
+  await getTwitterFeed();
+  showButton('twitter');
+  feedsLoaded = true;
+}
 
-  */
+
+/*
+  Function Name: setFeedTitle
+  Description: Sets the feed title when given a title
+*/
 
 const setFeedTitle = (title) => {
   const titleObject = document.getElementsByClassName('feedContainer__title__text')[0];
@@ -214,14 +233,19 @@ setupFeed();
 
 /*
   Function Name : toggleFeed
-  Description: Handles hiding the githubFeed on exit and showing it on button.
+  Description: Handles toggling feeds
 */
 
 const toggleFeed = (element) => {
+  // Toggle Feed is called by a div element, so we grab the id here
   const id = element.id;
+  // Getting references to feed container and buttons.
   const feedContainer = document.getElementById('feedContainer');
   const gitHubButton = document.getElementById('github-button');
   const twitterButton = document.getElementById('twitter-button');
+
+  // If the ID is a button ID we populate a feed and set it's title, and display it
+  // If the ID was a exit button ID, we hide feed and show both buttons.
   switch (id) {
     case gitHubButton.id:
       populateFeed('github');
@@ -247,7 +271,7 @@ const toggleFeed = (element) => {
       twitterButton.hidden = false;
       break;
     default:
-      console.log(`Current object ${element} is not compatible with githubFeed library`)
+      console.log(`Current object ${element} is not compatible with feed library`);
       break;
   }
 }
