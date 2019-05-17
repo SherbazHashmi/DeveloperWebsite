@@ -185,7 +185,6 @@ const populateFeed = (type) => {
 const hideButtons = () => {
   const feedButtons = document.getElementsByClassName('feed-button');
   for (let i = 0; i < feedButtons.length; i++) {
-    console.log(feedButtons[i]);
     feedButtons[i].hidden = true;
   }
 };
