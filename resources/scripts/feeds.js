@@ -63,14 +63,18 @@ const getGithubFeed = async() => {
   Description: Pulls Twitter Feed from my REST API which interacts with twitter servers.
 */
 const getTwitterFeed = async() => {
-  let tweets = await fetch(twitterApiUrl);
-  if (tweets.status === 200) {
-    console.log('Got Twitter Feed');
-  } else {
-    // Access Backup Tweets JSON if API not online.
-    tweets = await fetch('https://sherbazhashmi.github.io/resources/data/my_tweets_backup.json');
+  try {
+    let tweets = await fetch(twitterApiUrl);
+    if (tweets.status === 200) {
+      console.log('Got Twitter Feed');
+    } else {
+      // Access Backup Tweets JSON if API not online.
+      tweets = await fetch('https://sherbazhashmi.github.io/resources/data/my_tweets_backup.json');
+    }
+    twitterFeed = await tweets.json();
+  } catch (e) {
+    console.log(e);
   }
-  twitterFeed = await tweets.json();
 };
 
 /*
