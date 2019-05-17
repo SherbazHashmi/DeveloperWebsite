@@ -64,16 +64,13 @@ const getGithubFeed = async() => {
 */
 const getTwitterFeed = async() => {
   try {
-    let tweets = await fetch(twitterApiUrl);
-    if (tweets.status === 403) {
-      console.log('Got Twitter Feed');
-    } else {
-      // Access Backup Tweets JSON if API not online.
-      tweets = await fetch('https://sherbazhashmi.github.io/resources/data/my_tweets_backup.json');
-    }
+    const tweets = await fetch(twitterApiUrl);
     twitterFeed = await tweets.json();
   } catch (e) {
     console.log(e);
+    // Access Backup Tweets JSON if API not online.
+    const tweets = await fetch('https://sherbazhashmi.github.io/resources/data/my_tweets_backup.json');
+    twitterFeed = await tweets.json();
   }
 };
 
