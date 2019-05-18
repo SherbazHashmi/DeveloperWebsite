@@ -1,0 +1,60 @@
+body, .content {
+    height: 100%;
+    margin: 0px;
+    color: #f8f8f8;
+}
+.light {
+    background-color: #015A71;
+}
+.dark {
+    background-color: #00232A;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.pane {
+    width: 100vw;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.head{
+    background-color: #101010;
+}
+.image, .description {
+    width: 50%;
+}
+
+.image{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image {
+    width: 35%;
+}
+
+.note {
+    color: white;
+    font-weight: bolder;
+    font-size: smaller;
+}
