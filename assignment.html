@@ -89,27 +89,54 @@
   <p><br></p>
   <h1><b>3.0 Part 3 Tasks</b></h1>
   <h2><b>3.1 Reflections</b></h2>
-  <p>Replace this line with your URL link to this element in your website.</p>
-  <p>Notes: Provide any notes you may have about this element here.</p>
+  <p><a href="about-my-site.html">About My Site</a></p>
+  <p>Notes: </p>
   <h2><b>3.2 Alternative CSS</b></h2>
-  <p>Replace this line with your URL link to this element in your website.</p>
-  <p>Notes: Provide any notes you may have about this element here.</p>
+  <p><a href="resources/styles/mobile.css">Mobile CSS</a></p>
+  <p>
+    This includes a mobile adaptation of my website's main styles. I am utilizing media queries to make the following changes to make the site mobile friendly.
+    First, given my gallery is a terrible experience on a smaller screen when the screen reaches the point where it's unusable, I hide the gallery and replace it with a static image.
+    Second, given screen width is rather narrow on mobile, all my content (text and tiles) stretch to be wider to make it easier to read.
+    Third, the social media feeds are not condusive of a good mobile experience, given you have such little screen real estate there should be only one thing to focus on
+    so as we reach mobile screen sizes they also vanish.
+    Fourth, Given it's a flexbox based website, I have been able to convert all of the elements in each pane from a row layout on desktop to a column layout on mobile.
+    It allows for a much nicer experience as mobile screens are not wide enough to display rows of tiles.
+  </p>
   <h2><b>3.3 Social Networking Button(s)</b></h2>
-  <p>Replace this line with your URL link to this element in your website.</p>
+  <p><a href="index.html">Social Networking Buttons on Top Right of Screen in Navbar</a> </p>
   <p>Notes: Provide any notes you may have about this element here.</p>
   <h2><b>3.4 Social Networking Feed(s)</b></h2>
-  <p>Replace this line with your URL link to this element in your website.</p>
-  <p>Notes: Provide any notes you may have about this element here.</p>
+  <p><a href="index.html">At the bottom right of the screen, click the twitter bubble</a></p>
+  <p>Notes:
+    <ul>
+      <li>Very proud of this one. I have developed my very own feed, including a hovering button, a back-end server utilizing REST API calls. It works very similarly to a chat window on a service like Facebook Messenger.</li>
+      <li>I developed a NodeJS based backend server that stores a token and interacts with the Twitter API. It is hosted on a free Amazon Web Services host. <span style="color: darkblue"> Note : I do understand the back end is not assessable, but if you want to look at the code I wrote please contact me.</span></li>
+      <li>My front end website utilizing <a href="resources/scripts/feeds.js">this script</a> requests my API to request the Twitter API for my tweets. Twitter API responds to my API which then responds to my site.</li>
+      <li>After getting the API response (which is in the form of a JSON Array File), my script handles the population of the data onto my DOM. Note: the script is heavily commented given it is slightly outside of the scope of this course</li>
+      <li>Additionally, I have set this up with Asynchronous Javascript, so, until I actually get a response from the server (if not I use the backup data), the buttons to access the twitter feed will not display. If both data sources fail, the user will not see the button and wonder why it's unresponsive.</li>
+      <li><span style="color: darkblue">Note: I did ask for special permission to do something very similar to this from Sabrina she did say yes, but I just extended it a bit with NodeJS API and using Twitter as my source instead.</span></li>
+  </ul>
+  </p>
   <h2><b>3.5 CSS and HTML Validation</b></h2>
-  <p>Replace this line with your URL link to this element in your website.</p>
-  <p>Notes: Provide any notes you may have about this element here.</p>
+  <p><a href="validation.html">Validation Page</a></p>
+  <p>Notes: Did have errors but explained and justified them on document.</p>
   <h2><b>3.6 Something Original</b></h2>
-  <p>Replace this line with your URL link to this element in your website.</p>
-  <p>Notes: Provide any notes you may have about this element here.</p>
+  <p>
+    <a href="index.html"></a>
+  </p>
+  <p>Notes:
+    <ul>
+      <li>Also proud of this one. Works using the same script as my social media feeds but enables a GitHub button. When pressed, little window appears which is scrollable like a chat box. Each cell is a GitHub project I have forked/created.</li>
+      <li>Each cell contains the title, description and three buttons to either view my project's readme, see the projects commits or download it. (Direct downloading works if the project is frequently downloaded)</li>
+      <li>This works by interfacing with the GitHub API, pulling account data and then seeing the patterns in the view, commit and download endpoints and generating them</li>
+      <li>Then the cells are populated in the feed and it's visible</li>
+      <li><span style="color: darkblue">Note: I do know it may seem similar to social media feed, but this offers more functionality and GitHub is not a social media network. Furthermore, while I have tried to minimise code redundancy by having shared functions like populate cell there is a significant amount of extra code that went into GitHub as is evident in the script.</span></li>
+  </ul>
+  </p>
   <p><br></p>
   <h1><b>Other</b></h1>
   <h2><b>Continuous Improvement Session</b></h2>
-  <p>Replace this line with the date you attended the continuous improvement session.</p>
+  <p>21/5/2019</p>
   <h2><b>Report</b></h2>
   <p>Replace this line with the local URL to your report.</p>
   <p><br></p>
