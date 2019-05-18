@@ -37,6 +37,10 @@ body, .content {
     justify-content: center;
 }
 
+image {
+    width: 80%;
+}
+
 .description {
     display: flex;
     flex-direction: column;
