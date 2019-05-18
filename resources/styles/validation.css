@@ -49,10 +49,6 @@ body, .content {
     justify-content: center;
 }
 
-.image {
-    width: 35%;
-}
-
 .note {
     color: white;
     font-weight: bolder;
