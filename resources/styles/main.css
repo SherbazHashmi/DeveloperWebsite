@@ -261,7 +261,7 @@ h1 {
 .counter__text {
   text-align: center;
   font-size: 80%;
-  font-weight: bol der;
+  font-weight: bolder;
 }
 
 
@@ -689,11 +689,11 @@ the arrow buttons on the gallery section */
   10% {
     transform: translate3d(-1px, -1px, 0) rotate(5deg);
   }
-  30%,
+  30%
   {
     transform: translate3d(2px, -4px, 0) rotate(-2deg);
   }
-  90%,
+  90%
   {
     transform: translate3d(-4px, -1px, 0) rotate(3deg);
   }
