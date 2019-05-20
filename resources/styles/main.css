@@ -76,6 +76,12 @@ h1 {
   text-align: center;
 }
 
+/* Setting Text Area */
+
+textarea {
+  width: 100%;
+}
+
 
 /* Top Banner with Navbar Setting Background Image */
 
