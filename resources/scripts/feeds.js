@@ -52,10 +52,17 @@ document.getElementById('feedContainer').hidden = true;
 */
 
 const getGithubFeed = async() => {
-  // Get Github Projects through a GET Call
-  const projects = await fetch(`${githubApiUrl}/users/${accountName}/repos`);
+  try {
+    // Get Github Projects through a GET Call
+    const projects = await fetch(`${githubApiUrl}/users/${accountName}/repos`);
+    githubFeed = await projects.json();
+  } catch (e) {
+    const projects = await fetch('https://sherbazhashmi.github.io/resources/data/github_backup.json');
+    githubFeed = await projects.json();
+    console.log('Error: Live data is not being used for GitHub feed due to API connection issues.');
+    console.log(e);
+  }
   //  Read the response as JSON
-  githubFeed = await projects.json();
 };
 
 /*
@@ -70,8 +77,8 @@ const getTwitterFeed = async() => {
     // Access Backup Tweets JSON if API not online.
     const tweets = await fetch('https://sherbazhashmi.github.io/resources/data/my_tweets_backup.json');
     twitterFeed = await tweets.json();
+    console.log('Error: Live data is not being used for GitHub feed due to API connection issues.');
     console.log(e);
-
   }
 };
 
